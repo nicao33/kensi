@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6 Meses com Você ❤️</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 25px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 25px;
+      color: #666;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 2.5rem;
+      animation: beat 1s infinite;
+      display: inline-block;
+      margin: 10px 0 20px;
+    }
+
+    button {
+      background: #ff4d6d;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63956;
+      transform: scale(1.05);
+    }
+
+    .hidden-message {
+      margin-top: 25px;
+      display: none;
+      animation: fadeIn 1s ease;
+      font-weight: 500;
+      color: #ff4d6d;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating hearts */
+    .hearts span {
+      position: fixed;
+      bottom: -50px;
+      font-size: 20px;
+      animation: float 10s linear infinite;
+      color: #ff4d6d;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    
+    
+    <h1>Feliz 6 Meses, Kensi ❤️</h1>
+    <h2>Desde que você chegou, tudo ficou mais leve 💜</h2>
+
+    <div class="heart">❤️</div>
+
+    <h3 id="contador" style="margin-bottom:20px; color:#ff4d6d; font-weight:600;"></h3>
+
+    <p>
+      Hoje a gente completa 6 meses juntos… e eu fico lembrando de tudo que a gente viveu até aqui. Cada risada, cada conversa, cada momento simples que virou especial só porque era com você. Kensi, minha gatinha princesa, ter você comigo é uma das melhores coisas que já me aconteceu. Nosso amor foi crescendo no tempo certo… bem devagarzinho, do jeitinho que a nossa música fala.
+    </p>
+
+    <p>
+      Eu amo o jeito que você faz meus dias ficarem mais leves, amo nossas conversas, nossas brincadeiras e até nossos silêncios. Com você eu me sinto em casa, em paz… e ao mesmo tempo vivendo algo intenso e bonito.
+    </p>
+
+    <p>
+      Obrigado por ser essa namorida incrível, parceira, carinhosa e por estar comigo em tudo. Eu tenho muito orgulho da gente… e sou muito feliz por te ter na minha vida. Que venham muitos e muitos capítulos da nossa história.
+    </p>
+
+    
+
+    <!-- Pedido de namoro -->
+    <div style="margin-top:35px;">
+      <h2 style="color:#ff4d6d;">Kensi, minha gatinha princesa…</h2>
+      <p style="font-weight:500;">Quer oficializar a promoção de namorido pra namorado comigo? 😏💍</p>
+
+      <div style="margin-top:15px; position:relative; height:120px; display:flex; align-items:center; justify-content:center; gap:20px;">
+        <button onclick="clicouSim()" style="margin-right:10px;">Sim 💖</button>
+        <button id="btnNao" onmouseover="fugirNao()" style="position:absolute; left:60%;">Não 😢</button>
+      </div>
+    </div>
+
+    <footer>
+      "Deixa acontecer devagarzinho" 🎶<br>
+      Nossa música 💛<br>
+      Devagarzinho – Tim Bernardes<br>
+      Feito com amor por seu namorido 💕
+    </footer>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="hearts">
+    <span style="left:10%; animation-delay:0s;">❤️</span>
+    <span style="left:20%; animation-delay:2s;">❤️</span>
+    <span style="left:35%; animation-delay:4s;">❤️</span>
+    <span style="left:50%; animation-delay:1s;">❤️</span>
+    <span style="left:65%; animation-delay:3s;">❤️</span>
+    <span style="left:80%; animation-delay:5s;">❤️</span>
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById('msg').style.display = 'block';
+    }
+
+    // Contador desde 24 de Julho
+    function atualizarContador() {
+      const inicio = new Date('2025-07-24T00:00:00');
+      const agora = new Date();
+
+      const diff = agora - inicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+
+      document.getElementById('contador').innerText =
+        `Juntos há ${dias} dias, ${horas} horas e ${minutos} minutos 💛`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    // Botão NÃO foge
+    function fugirNao() {
+      const btn = document.getElementById('btnNao');
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    // Clique no SIM
+    function clicouSim() {
+      alert('Eu sabia 😂❤️ Você tá é muito ansiosa pro jantar isso sim! … Mas já vou avisando: não vou te pedir em namoro no jantar não viu 😌🍝');
+    }
+  </script>
+
+  <!-- Música de fundo -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/DkVCb-81KFU?autoplay=1&loop=1&playlist=DkVCb-81KFU" 
+  title="Devagarzinho - Tim Bernardes" frameborder="0" 
+  allow="autoplay" allowfullscreen></iframe>
+
+</body>
+</html>
